@@ -1,0 +1,28 @@
+.projects-grid {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .projects-grid h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #0056b3;
+  }
+  .projects-grid h1::after{
+    content: '';
+    display: block;
+    width: 170px;
+    height: 3px;
+    background: #0056b3;
+    margin: 5px auto;
+    
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller min-width for mobile */
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }

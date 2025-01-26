@@ -1,0 +1,91 @@
+/* Base Navbar Styling */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #333333;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Source Code Pro',monospace;
+}
+
+/* Logo */
+.nav_logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav_menu {
+  display: flex;
+}
+
+.nav_menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_menu ul li {
+  margin: 0 15px;
+}
+
+.nav_menu ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav_menu ul li a:hover {
+  color: #76c7c0;
+}
+
+/* Toggle Button */
+.nav_toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav_menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Column layout for menu */
+    position: absolute;
+    top: 55px;
+    right: 5%;
+    background-color: #222;
+    width: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .nav_menu.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .nav_menu ul {
+    flex-direction: column; /* Stack items in a column */
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav_menu ul li {
+    margin: 10px 0; /* Add spacing between items */
+    text-align: center;
+  }
+
+  .nav_toggle {
+    display: block; /* Show toggle button */
+  }
+}
